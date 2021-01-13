@@ -240,6 +240,19 @@
         private bool _drawerIsOpen;
 
         [Category("Drawer")]
+        public bool DrawerOpenOnHover
+        {
+            get
+            {
+                return drawerControl.DrawerOpenOnHover;
+            }
+            set
+            {
+                drawerControl.DrawerOpenOnHover = value;
+            }
+        }
+
+        [Category("Drawer")]
         public bool DrawerIsOpen
         {
             get

@@ -39,6 +39,8 @@
 
         private bool _isOpen;
 
+        public bool DrawerOpenOnHover { get; set; }
+
         [Category("Drawer")]
         public bool IsOpen
         {
@@ -355,6 +357,23 @@
                 Increment = 0.04
             };
             _clickAnimManager.OnAnimationProgress += sender => Invalidate();
+
+
+            this.MouseEnter += (sender, args) =>
+            {
+                if (DrawerOpenOnHover)
+                {
+                    this.IsOpen = true;
+                }
+            };
+
+            this.MouseLeave += (sender, args) =>
+            {
+                if (DrawerOpenOnHover)
+                {
+                    this.IsOpen = false;
+                }
+            };
         }
 
         [EditorBrowsable(EditorBrowsableState.Advanced)]
