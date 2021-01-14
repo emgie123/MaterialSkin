@@ -361,7 +361,7 @@
 
             this.MouseEnter += (sender, args) =>
             {
-                if (DrawerOpenOnHover)
+                if (DrawerOpenOnHover && !this.IsOpen)
                 {
                     this.IsOpen = true;
                 }
@@ -369,7 +369,7 @@
 
             this.MouseLeave += (sender, args) =>
             {
-                if (DrawerOpenOnHover)
+                if (DrawerOpenOnHover && this.IsOpen)
                 {
                     this.IsOpen = false;
                 }

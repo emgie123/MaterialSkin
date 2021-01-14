@@ -9,6 +9,14 @@ namespace MaterialSkin.Controls
     ///Adapted from http://www.codeproject.com/Articles/601900/FlexibleMessageBox
     public class MaterialMessageBox : IMaterialControl
     {
+        public static string LanguageOverride
+        {
+            set
+            {
+                FlexibleMaterialForm.LanguageOverride = value;
+            }
+        }
+
         [Browsable(false)]
         public int Depth { get; set; }
 

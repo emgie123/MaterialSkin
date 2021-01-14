@@ -13,6 +13,8 @@ namespace MaterialSkin.Controls
     /// </summary>
     public class FlexibleMaterialForm : MaterialForm, IMaterialControl
     {
+        public static string LanguageOverride { get; set; }
+
         private readonly MaterialSkinManager materialSkinManager;
 
         /// <summary>
@@ -82,9 +84,9 @@ namespace MaterialSkin.Controls
             this.messageContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForIcon)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // leftButton
-            //
+            // 
             this.leftButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.leftButton.AutoSize = false;
             this.leftButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -93,7 +95,7 @@ namespace MaterialSkin.Controls
             this.leftButton.DrawShadows = true;
             this.leftButton.HighEmphasis = false;
             this.leftButton.Icon = null;
-            this.leftButton.Location = new System.Drawing.Point(44, 163);
+            this.leftButton.Location = new System.Drawing.Point(198, 324);
             this.leftButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.leftButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.leftButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -105,55 +107,55 @@ namespace MaterialSkin.Controls
             this.leftButton.UseAccentColor = false;
             this.leftButton.UseVisualStyleBackColor = true;
             this.leftButton.Visible = false;
-            //
+            // 
             // messageContainer
-            //
-            this.messageContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.messageContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.messageContainer.BackColor = System.Drawing.Color.White;
             this.messageContainer.Controls.Add(this.pictureBoxForIcon);
             this.messageContainer.Controls.Add(this.richTextBoxMessage);
             this.messageContainer.Location = new System.Drawing.Point(0, 65);
             this.messageContainer.Name = "messageContainer";
-            this.messageContainer.Size = new System.Drawing.Size(388, 81);
+            this.messageContainer.Size = new System.Drawing.Size(542, 242);
             this.messageContainer.TabIndex = 1;
-            //
+            // 
             // pictureBoxForIcon
-            //
+            // 
             this.pictureBoxForIcon.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxForIcon.Location = new System.Drawing.Point(15, 19);
             this.pictureBoxForIcon.Name = "pictureBoxForIcon";
             this.pictureBoxForIcon.Size = new System.Drawing.Size(32, 32);
             this.pictureBoxForIcon.TabIndex = 8;
             this.pictureBoxForIcon.TabStop = false;
-            //
+            // 
             // richTextBoxMessage
-            //
-            this.richTextBoxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.richTextBoxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.richTextBoxMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxMessage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FlexibleMaterialFormBindingSource, "MessageText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.richTextBoxMessage.Depth = 0;
             this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.richTextBoxMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.richTextBoxMessage.Hint = "";
-            this.richTextBoxMessage.Location = new System.Drawing.Point(47, 2);
+            this.richTextBoxMessage.Location = new System.Drawing.Point(62, 19);
             this.richTextBoxMessage.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBoxMessage.MouseState = MaterialSkin.MouseState.HOVER;
             this.richTextBoxMessage.Name = "richTextBoxMessage";
             this.richTextBoxMessage.ReadOnly = true;
             this.richTextBoxMessage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxMessage.Size = new System.Drawing.Size(338, 78);
+            this.richTextBoxMessage.Size = new System.Drawing.Size(468, 199);
             this.richTextBoxMessage.TabIndex = 0;
             this.richTextBoxMessage.TabStop = false;
             this.richTextBoxMessage.Text = "<Message>";
             this.richTextBoxMessage.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxMessage_LinkClicked);
-            //
+            // 
             // middleButton
-            //
+            // 
             this.middleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.middleButton.AutoSize = false;
             this.middleButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -162,7 +164,7 @@ namespace MaterialSkin.Controls
             this.middleButton.DrawShadows = true;
             this.middleButton.HighEmphasis = true;
             this.middleButton.Icon = null;
-            this.middleButton.Location = new System.Drawing.Point(160, 163);
+            this.middleButton.Location = new System.Drawing.Point(314, 324);
             this.middleButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.middleButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.middleButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -174,9 +176,9 @@ namespace MaterialSkin.Controls
             this.middleButton.UseAccentColor = false;
             this.middleButton.UseVisualStyleBackColor = true;
             this.middleButton.Visible = false;
-            //
+            // 
             // rightButton
-            //
+            // 
             this.rightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rightButton.AutoSize = false;
             this.rightButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -185,7 +187,7 @@ namespace MaterialSkin.Controls
             this.rightButton.DrawShadows = true;
             this.rightButton.HighEmphasis = true;
             this.rightButton.Icon = null;
-            this.rightButton.Location = new System.Drawing.Point(270, 163);
+            this.rightButton.Location = new System.Drawing.Point(424, 324);
             this.rightButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.rightButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.rightButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -197,11 +199,11 @@ namespace MaterialSkin.Controls
             this.rightButton.UseAccentColor = false;
             this.rightButton.UseVisualStyleBackColor = true;
             this.rightButton.Visible = false;
-            //
+            // 
             // FlexibleMaterialForm
-            //
+            // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(388, 208);
+            this.ClientSize = new System.Drawing.Size(542, 369);
             this.Controls.Add(this.rightButton);
             this.Controls.Add(this.middleButton);
             this.Controls.Add(this.messageContainer);
@@ -221,6 +223,7 @@ namespace MaterialSkin.Controls
             this.messageContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForIcon)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private MaterialButton leftButton;
@@ -313,13 +316,23 @@ namespace MaterialSkin.Controls
             /// <summary>
             /// Defines the it
             /// </summary>
-            it
+            it,
+
+            /// <summary>
+            /// Defines the it
+            /// </summary>
+            pl
         };
 
         /// <summary>
         /// Defines the BUTTON_TEXTS_ENGLISH_EN
         /// </summary>
-        private static readonly String[] BUTTON_TEXTS_ENGLISH_EN = { "OK", "Cancel", "&Yes", "&No", "&Abort", "&Retry", "&Ignore" };//Note: This is also the fallback language
+        private static readonly String[] BUTTON_TEXTS_POLISH_EN = { "OK", "Anuluj", "Tak", "Nie", "Opuść", "Powtórz", "Ignoruj" };//Note: This is also the fallback language
+
+        /// <summary>
+        /// Defines the BUTTON_TEXTS_ENGLISH_EN
+        /// </summary>
+        private static readonly String[] BUTTON_TEXTS_ENGLISH_EN = { "OK", "Cancel", "Yes", "No", "Abort", "Retry", "Ignore" };//Note: This is also the fallback language
 
         /// <summary>
         /// Defines the BUTTON_TEXTS_GERMAN_DE
@@ -361,6 +374,11 @@ namespace MaterialSkin.Controls
             //Try to evaluate the language. If this fails, the fallback language English will be used
             Enum.TryParse<TwoLetterISOLanguageID>(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, out this.languageID);
 
+            if (LanguageOverride != null)
+            {
+                Enum.TryParse<TwoLetterISOLanguageID>(LanguageOverride, out this.languageID);
+            }
+
             this.KeyPreview = true;
             this.KeyUp += FlexibleMaterialForm_KeyUp;
 
@@ -400,6 +418,7 @@ namespace MaterialSkin.Controls
                 case TwoLetterISOLanguageID.de: return BUTTON_TEXTS_GERMAN_DE[buttonTextArrayIndex];
                 case TwoLetterISOLanguageID.es: return BUTTON_TEXTS_SPANISH_ES[buttonTextArrayIndex];
                 case TwoLetterISOLanguageID.it: return BUTTON_TEXTS_ITALIAN_IT[buttonTextArrayIndex];
+                case TwoLetterISOLanguageID.pl: return BUTTON_TEXTS_POLISH_EN[buttonTextArrayIndex];
 
                 default: return BUTTON_TEXTS_ENGLISH_EN[buttonTextArrayIndex];
             }
