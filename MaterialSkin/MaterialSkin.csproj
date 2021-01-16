@@ -45,6 +45,7 @@
     <Compile Include="Controls\FlexibleMaterialDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialFlowLayoutCard.cs" />
     <Compile Include="Controls\MaterialSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -123,6 +124,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controls\FlexibleMaterialDialog.resx">
       <DependentUpon>FlexibleMaterialDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialCard.resx">
+      <DependentUpon>MaterialCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialForm.resx">
       <DependentUpon>MaterialForm.cs</DependentUpon>

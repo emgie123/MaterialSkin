@@ -6,7 +6,7 @@
     using System.Drawing.Drawing2D;
     using System.Windows.Forms;
 
-    public class MaterialCard : Panel, IMaterialControl
+    public class MaterialFlowLayoutCard : FlowLayoutPanel, IMaterialControl
     {
         [Browsable(false)]
         public int Depth { get; set; }
@@ -17,7 +17,7 @@
         [Browsable(false)]
         public MouseState MouseState { get; set; }
 
-        public MaterialCard()
+        public MaterialFlowLayoutCard()
         {
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
             Paint += new PaintEventHandler(paintControl);
