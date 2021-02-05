@@ -174,6 +174,7 @@
         private bool _headerMouseDown;
 
         private Padding originalPadding;
+        public event EventHandler DrawerEndClose;
 
         public MaterialForm()
         {
@@ -184,6 +185,10 @@
             DrawerIndicatorWidth = 0;
             DrawerHighlightWithAccent = true;
             DrawerBackgroundWithAccent = false;
+            drawerControl.DrawerEndClose += sender =>
+            {
+                DrawerEndClose?.Invoke(sender, null);
+            };
 
             FormBorderStyle = FormBorderStyle.None;
             Sizable = true;
